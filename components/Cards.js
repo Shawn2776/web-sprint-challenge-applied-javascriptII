@@ -40,10 +40,6 @@ axios
       const bsTest = cardMaker({ headline, src, author })
 
       cardsContainer.appendChild(bsTest);
-
-      document.addEventListener('click',(e) => {
-        console.log(this.headline)
-      })
     });
 
     javascriptTopic.forEach(element => {
@@ -55,10 +51,6 @@ axios
       const jsTest = cardMaker({ headline, src, author })
 
       cardsContainer.appendChild(jsTest);
-
-      document.addEventListener('click',(e) => {
-        console.log(headline)
-      })
     });
 
     jqueryTopic.forEach(element => {
@@ -94,14 +86,6 @@ axios
       cardsContainer.appendChild(techTest);
     });
 
-    
-
-    
-
-    
-    
-
-
     function cardMaker({ headline, src, author}) {
       const cardDiv = document.createElement('div');
       const headlinedDiv = document.createElement('div');
@@ -127,14 +111,19 @@ axios
       
       return cardDiv;
     }
+
+    const cards = document.querySelectorAll('.card .headline')
+    Array.from(cards).forEach(element => {
+      element.addEventListener('click', (e) => {
+        console.log(element)
+      })
+    });
     
 
   })
   .catch((drama) => {
     console.log(drama);
   })
-
-
 
 
 
