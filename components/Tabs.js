@@ -14,7 +14,7 @@ axios
 .get(`https://lambda-times-api.herokuapp.com/topics`)
 .then(futureData => {
   futureData.data.topics.forEach(element => {
-    let newDiv = document.createElement('div');
+    const newDiv = document.createElement('div');
     newDiv.classList.add(`tab`);
     newDiv.textContent = element;
     topicsElement.appendChild(newDiv);
