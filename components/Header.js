@@ -26,7 +26,7 @@ function Header() {
   // add textContent
   headerSpanDate.textContent = `December 4th, 2020`;
   headerH1.textContent = 'Lambda Times';
-  headerSpanTemp.textContent = '98°';
+  headerSpanTemp.textContent = '30°';
 
   // appendChild to parent element
   headerDiv.appendChild(headerSpanDate);
